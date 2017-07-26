@@ -163,8 +163,6 @@ SSTATE_DIR ?= '/opt/freescale/yocto/sstate-cache'
 BB_NUMBER_THREADS = '4'
 PARALLEL_MAKE = '-j 4'
 
-# Remove broken qtbase bbappends, missing compiler flags, meta-boundary fixes this
-BBMASK += "/meta-freescale/dynamic-layers/qt5-layer/recipes-qt/qt5/qtbase*"
 EOF
     # Change settings according environment
     sed -e "s,MACHINE ??=.*,MACHINE ??= '$MACHINE',g" \
