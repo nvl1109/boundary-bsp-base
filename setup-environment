@@ -160,6 +160,9 @@ LICENSE_FLAGS_WHITELIST = "commercial"
 DL_DIR ?= '/opt/freescale/yocto/imx/'
 SSTATE_DIR ?= '/opt/freescale/yocto/sstate-cache'
 
+BBMASK += "meta-freescale/dynamic-layers/browser-layer/recipes-browser/chromium/chromium-wayland_48.0.2548.0.bbappend"
+BBMASK += "meta-freescale/dynamic-layers/browser-layer/recipes-browser/chromium/chromium_52.0.2743.76.bbappend"
+
 EOF
     # Change settings according environment
     sed -e "s,MACHINE ??=.*,MACHINE ??= '$MACHINE',g" \
